@@ -1,10 +1,11 @@
 import axios from "axios";
 
+
 const BASE_URL = "https://www.googleapis.com/customsearch/v1";
 
 const params = {
-    key: "AIzaSyCrMFZfP3D6uQhFIWAxw9zyIzMcEKEVMx0",
-    cx: "c40a54f6d4e1e41e0",
+    key: import.meta.env.VITE_REACT_APP_KEY,
+    cx: import.meta.env.VITE_REACT_APP_CX,
 };
 
 export const fetchDataFromApi = async (payload) => {
