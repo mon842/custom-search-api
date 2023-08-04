@@ -6,7 +6,7 @@ import { BiNews } from "react-icons/bi";
 import { RiVideoLine } from "react-icons/ri";
 import { SlTag } from "react-icons/sl";
 
-import Logo from "../assets/google-logo.png";
+import Logo from "../assets/Bhogol.png";
 import SearchInput from "./SearchInput";
 import ProfileIcon from "./ProfileIcon";
 import { Context } from "../utils/ContextApi";
@@ -44,25 +44,23 @@ const SearchResultHeader = () => {
                 </div>
             </div>
 
-            <div className="flex ml-[-12px] mt-3">
+            <div className="flex ml-[-12px] my-3">
                 {menu.map((menu, index) => (
                     <span
                         key={index}
-                        className={`flex items-center p-3 text-[#5f6368] cursor-pointer relative ${
+                        className={`mx-2 h-9 flex items-center p-4 text-[#5f6368] cursor-pointer relative ${
                             selectedMenu === menu.name ? "text-[#1a73e8]" : ""
-                        }`}
+                        } ${selectedMenu === menu.name ? "bg-blue-50 rounded-3xl" : "border border-gray-200 rounded-3xl"}`}
                         onClick={() => clickHandler(menu)}
                     >
-                        <span className="hidden md:block mr-2">
-                            {menu.icon}
-                        </span>
                         <span className="text-sm">{menu.name}</span>
-                        {selectedMenu === menu.name && (
+                        {/* {selectedMenu === menu.name && (
                             <span className="h-[3px] w-[calc(100%-20px)] absolute bg-[#1a73e8] bottom-0 left-[10px]" />
-                        )}
+                        )} */}
                     </span>
                 ))}
             </div>
+            
         </div>
     );
 };

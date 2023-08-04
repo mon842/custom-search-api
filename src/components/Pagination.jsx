@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { useParams, useNavigate } from "react-router-dom";
 
-import Logo from "../assets/google-pagination-logo.png";
+import Logo from "../assets/Bhooooooooogol.png";
 import { pagination } from "../utils/Constants";
 
 const Pagination = ({ queries }) => {
